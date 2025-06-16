@@ -39,7 +39,7 @@ const useBookStore = create(
       removeBook: (id) =>
         set((s) => {
           const target = s.books.find((b) => b.id === id);
-          if (!target) return s;          // nothing to do
+          if (!target) return s;        
           return {
             books: s.books.filter((b) => b.id !== id),
             available:
